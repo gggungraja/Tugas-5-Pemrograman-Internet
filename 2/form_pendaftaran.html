@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Pendaftaran Mahasiswa Baru - Universitas X</title>
+  </head>
+  <body>
+    <h2>Form Pendaftaran Mahasiswa Baru</h2>
+    <form action="proses_pendaftaran.php" method="POST">
+      <label>Nama Lengkap:</label><br />
+      <input type="text" name="nama" required /><br /><br />
+
+      <label>Tempat Lahir:</label><br />
+      <input type="text" name="tempat_lahir" required /><br /><br />
+
+      <label>Tanggal Lahir (dd-mm-yyyy):</label><br />
+      <input
+        type="text"
+        name="tanggal_lahir"
+        required
+        pattern="\d{2}-\d{2}-\d{4}"
+        title="Format harus dd-mm-yyyy"
+      /><br /><br />
+
+      <label>Alamat Rumah:</label><br />
+      <textarea name="alamat" rows="4" cols="50" required></textarea
+      ><br /><br />
+
+      <label>Jenis Kelamin:</label><br />
+      <input type="radio" name="jenis_kelamin" value="Pria" required /> Pria
+      <input type="radio" name="jenis_kelamin" value="Wanita" required />
+      Wanita<br /><br />
+
+      <label>Asal Sekolah:</label><br />
+      <input type="text" name="asal_sekolah" required /><br /><br />
+
+      <label>Nilai UAN:</label><br />
+      <input
+        type="text"
+        name="nilai_uan"
+        required
+        pattern="\d+(\.\d{1,2})?"
+        title="Masukkan angka, boleh desimal"
+      /><br /><br />
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
